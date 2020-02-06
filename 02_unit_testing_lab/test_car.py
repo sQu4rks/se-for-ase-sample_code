@@ -14,11 +14,12 @@ class CarTest(unittest.TestCase):
         self.assertEqual(res, 8500, "Result should be 8500 (85 x 100)")
 
     def test_serialization_returns_correct_string(self):
-        target_json = '{"color": "red", "top_speed": 120, "gear_box": "auto", "average_speed": 10, "hours_driven": 100}'
+        target_json = '{"color": "red", "top_speed": 120, "gear_box": "auto", "average_speed": 85, "hours_driven": 100}'
 
         test_car = Car("red", 120, "auto", "85", "100")
         res = test_car.get_json()
 
         self.assertEqual(res, target_json, "Target json should look like this: {}".format(target_json))
+
 if __name__ == "__main__":
     unittest.main()
