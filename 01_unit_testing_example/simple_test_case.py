@@ -7,7 +7,9 @@ def mult(a, b):
 
 class TestMult(unittest.TestCase):
     def test_positive_number_multiplication(self):
-        self.assertEqual(mult(2, 2), 4, "2 x 2 should be 4")
+        res = mult(2, 2)
+        self.assertEqual(res, 4, "2 x 2 should be 4")
+        self.assertIsInstance(res, int)
 
     def test_positive_negative_number_multiplication(self):
         self.assertEqual(mult(2, -2), -4, "2 x (-2) should be -4")
