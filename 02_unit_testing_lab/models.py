@@ -35,7 +35,7 @@ class Car:
             'hours_driven': self.get_hours_driven()
         }
 
-        return json.dumps(ret)
+        return json.dumps(ret, sort_keys=True)
 
     def get_distance_driven(self):
         return self.average_speed * self.hours_driven
